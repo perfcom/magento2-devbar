@@ -3,7 +3,7 @@
     "description": "This module adds a floating bar to the frontend with useful information and shortcuts for developers.",
     "minimum-stability": "stable",
     "license": "MIT",
-    "type": "composer-plugin",
+    "type": "magento2-module",
     "authors": [
         {
             "name": "Louis de Looze",
