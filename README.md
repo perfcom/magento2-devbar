@@ -15,8 +15,4 @@ This module adds a floating bar to the frontend with useful information and shor
 - Add random (single) product to cart
 - Checkout link
 
-## ToDo
-- Make sure it is impossible to be active in a production environemnt
-- Make it CSP compliant
-
 
