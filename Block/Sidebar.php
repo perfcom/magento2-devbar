@@ -23,6 +23,7 @@ class Sidebar extends Template
         private readonly ScopeConfigInterface $scopeConfig,
         private readonly UrlInterface $urlBuilder,
         private readonly State $appState,
+        private readonly \Magento\Backend\Model\UrlInterface $backendUrl,
         array $data = []
     ) {
         parent::__construct($context, $data);
@@ -45,12 +46,14 @@ class Sidebar extends Template
 
     public function isCspStrictMode()
     {
-        return $this->scopeConfig->isSetFlag('csp/mode/storefront/report_only') ? 'No' : 'Yes';
+        $storefront = $this->scopeConfig->isSetFlag('csp/mode/storefront/report_only') ? 'F-No' : 'F-Yes';
+        $checkout = $this->scopeConfig->isSetFlag('csp/mode/storefront_checkout_index_index/report_only') ? 'C-No' : 'C-Yes';
+        return $storefront . ', ' . $checkout;
     }
 
     public function getBackendUrl()
     {
-        return $this->urlBuilder->getUrl('admin');
+        return $this->backendUrl->getRouteUrl('adminhtml');
     }
 
     public function getLoginUrl()

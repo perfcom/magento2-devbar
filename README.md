@@ -9,7 +9,7 @@ This module adds a floating bar to the frontend with useful information and shor
   - Magento version
   - Database name
   - Search Engine
-  - CSP mode
+  - CSP mode (F, for frontend, C for checkout)
 - Backend link
 - Login with random user
 - Add random (single) product to cart
